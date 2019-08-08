@@ -1,6 +1,6 @@
 import tensorflow as tf 
 
-def unpooling2d(x,strides=2,name='unpooling2d'):
+def unpooling2d(x,strides=[2,2],name='unpooling2d'):
     with name_scope(name):
         x_shape=x.get_shape().as_list()
         x=tf.expand_dims(x,3)
